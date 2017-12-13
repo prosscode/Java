@@ -82,8 +82,7 @@ public class RandomUtils {
 		RandomUtils ru = new RandomUtils();
 
 		// 初始化数组原始数据
-		String[] name = new String[] { "白昊", "别小龙", "邓权", "黄家立", "雷荣", "刘潇",
-				"彭爽", "唐超", "王钊源", "颜振", "周军" };
+		String[] name = new String[] { "张三", "李四", "王五", "赵六", "李七"};
 		int num1 = (int) (Math.random() * (name.length));
 
 		// 模拟计算过程
