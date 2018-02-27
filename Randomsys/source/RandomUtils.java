@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.gh.lesson04.work;
 
 import java.io.BufferedReader;
