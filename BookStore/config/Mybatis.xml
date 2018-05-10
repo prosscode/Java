@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+  <configuration>
+  	<!-- 1.加载jdbc文件 ,将交给spring管理-->
+<!--   	<properties resource="jdbc.properties"></properties> -->
+  	
+  	<!-- 2. 别名-->
+  	<typeAliases>
+  		<package name="entity"/>
+  	</typeAliases>
+  	
+  	<!-- 3.配置环境，将交给spring管理 -->
+  	<!-- <environments default="development">
+  		<environment id="development">
+  			事务环境下  必須
+  			<transactionManager type="JDBC"></transactionManager>
+  			连接池配置  必須
+  			<dataSource type="POOLED">
+  				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${user}"/>
+				<property name="password" value="${password}"/>
+  			</dataSource>
+  		</environment>
+  	</environments> -->
+  	
+  	<!-- 4.映射器 对应的mapper映射  两种方式-->
+  	<mappers>
+  		<package name="mapper"/>
+  		<!-- <mapper resource="UserMapper.xml" /> -->
+  	</mappers>
+  </configuration>
