@@ -1,4 +1,4 @@
-### BookStore 
+### BookStore （毕设demo）
 
 **网站结构图**：
 
