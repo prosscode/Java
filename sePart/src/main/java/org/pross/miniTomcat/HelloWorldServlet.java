@@ -11,7 +11,7 @@ public class HelloWorldServlet extends MyServlet{
 
 	public void doGet(MyRequest myRequest, MyResponse myResponse) {
 		try {
-			myResponse.write("get girl ...");
+			myResponse.write("get msg ...");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -19,7 +19,7 @@ public class HelloWorldServlet extends MyServlet{
 
 	public void doPost(MyRequest myRequest, MyResponse myResponse) {
 		try {
-			myResponse.write("post girl ...");
+			myResponse.write("post msg ...");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
