@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.gh.lesson04.work;
+package org.pross.randomsys;
 
 import java.util.Scanner;
 

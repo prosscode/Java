@@ -1,4 +1,4 @@
-package com.pross.guessfist;
+package org.pross.guessFist;
 
 import java.util.Scanner;
 
@@ -66,8 +66,7 @@ public class Game {
 		while (flag) {
 			System.out.print("\n是否要开始下一轮（y/n）:");
 			String choose = input.next();
-			switch (choose) {
-			case "y":
+			if ("y".equals(choose)) {
 				int u = user.userSelectFist();
 				int c = computer.computerSelectFist();
 				count++;
@@ -80,10 +79,10 @@ public class Game {
 					System.out.println("此轮" + computer.cname + "(电脑)赢了。");
 					computer.cscore++;
 				}
-				break;
-			case "n":
+
+			} else if ("n".equals(choose)) {
 				flag = false;
-				break;
+
 			}
 		}
 	}

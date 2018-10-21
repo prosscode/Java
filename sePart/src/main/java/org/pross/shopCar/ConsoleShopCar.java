@@ -1,4 +1,4 @@
-package com.pross.shopcar;
+package org.pross.shopCar;
 
 /**
  * @author maXpross
@@ -7,7 +7,7 @@ package com.pross.shopcar;
  *
  * Content 购物车入口
  */
-public class TestShopCar {
+public class ConsoleShopCar {
 	public static void main(String[] args) {
 		Util util=new Util();
 		util.menu();

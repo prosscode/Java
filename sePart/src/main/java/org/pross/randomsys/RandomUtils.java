@@ -1,4 +1,4 @@
-package com.gh.lesson04.work;
+package org.pross.randomsys;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,6 +21,16 @@ public class RandomUtils {
 	Scanner input = new Scanner(System.in);
 	boolean flag = true;
 
+	public static int returnChooseNum(String choose){
+		int chooseNum = 0;
+		if(choose.equalsIgnoreCase("Y")){
+			chooseNum = 1;
+		}else if (choose.equalsIgnoreCase("N")){
+			chooseNum = 2;
+		}
+		return chooseNum;
+	}
+
 	/**
 	 * 数组存储方式
 	 */
@@ -28,11 +38,14 @@ public class RandomUtils {
 		RandomUtils ru = new RandomUtils();
 		System.out.print("功能描述：是否清楚其功能?(Y/N)");
 		String choose = input.next();
-		switch (choose) {
-		case "Y":
+
+		int chooseNum=RandomUtils.returnChooseNum(choose);
+
+		switch (chooseNum) {
+		case 1:
 			ru.RandomArray();
 			break;
-		case "N":
+		case 2:
 			System.out.println("请查看文档README.md");
 			ru.reInfo();
 			break;
@@ -49,8 +62,9 @@ public class RandomUtils {
 		RandomUtils ru = new RandomUtils();
 		System.out.print("功能描述：是否清楚其功能?(Y/N)");
 		String choose = input.next();
-		switch (choose) {
-		case "Y":
+		int chooseNum=RandomUtils.returnChooseNum(choose);
+		switch (chooseNum) {
+		case 1:
 			System.out.print("请输入文件地址：");
 			String src = input.next();
 
@@ -60,7 +74,7 @@ public class RandomUtils {
 			// 通过随机数在集合中产生一个随机名字
 			ru.RandomNum(ru.ReadFile(src));
 			break;
-		case "N":
+		case 2:
 			System.out.println("请查看文档README.md");
 			ru.reInfo();
 			break;
@@ -94,9 +108,9 @@ public class RandomUtils {
 		// System.out.println(Arrays.toString(name));
 		System.out.print("是否继续?(Y/N)");
 		String choose = input.next();
-
-		switch (choose) {
-		case "Y":
+		int chooseNum=RandomUtils.returnChooseNum(choose);
+		switch (chooseNum) {
+		case 1:
 			// 第二次随机
 			int num2 = (int) (Math.random() * (name.length));
 			// 模拟计算过程
@@ -109,7 +123,7 @@ public class RandomUtils {
 			name[name.length - 1] = null;
 			ru.reInfo();
 			break;
-		case "N":
+		case 2:
 			ru.reInfo();
 			break;
 		default:
@@ -152,8 +166,7 @@ public class RandomUtils {
 	/**
 	 * 读取本地文件内容，添加到ArrayList集合内(集合+IO流读取方式)
 	 * 
-	 * @param src  用户输入文本路径
-	 * @param list 返回List集合
+	 * @param path  用户输入文本路径
 	 */
 	public List<String> ReadFile(String path) {
 		RandomUtils ru = new RandomUtils();

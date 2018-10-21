@@ -1,6 +1,5 @@
 ### Shopcar
 
-https://github.com/prosscode/Java
 
 控制台版的购物车，实现增删查改
 

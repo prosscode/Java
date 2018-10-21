@@ -1,4 +1,4 @@
-package com.pross.guessfist;
+package org.pross.guessFist;
 
 /**
  * @author maXpross
