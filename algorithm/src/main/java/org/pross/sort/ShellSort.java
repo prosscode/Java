@@ -9,33 +9,33 @@ import java.util.Map;
  */
 public class ShellSort {
 
-	public static int[] shellSort(int[] array) {
-		int i;
-		int j;
-		int temp;
-		//自定义间隔序列
-		int number = array.length / 2;
-		while (number >= 1) {
-			for (i = number; i < array.length; i++) {
-				temp = array[i];
-				j = i - number;
-				while (j >= 0 && array[j] < temp) {
-					array[j + number] = array[j];
-					j = j - number;
-				}
-				array[j + number] = temp;
-			}
-			number = number / 2;
-		}
+    public static int[] shellSort(int[] array) {
+        int i;
+        int j;
+        int temp;
+        //自定义间隔序列
+        int number = array.length / 2;
+        while (number >= 1) {
+            for (i = number; i < array.length; i++) {
+                temp = array[i];
+                j = i - number;
+                while (j >= 0 && array[j] < temp) {
+                    array[j + number] = array[j];
+                    j = j - number;
+                }
+                array[j + number] = temp;
+            }
+            number = number / 2;
+        }
 
-		return array;
-	}
+        return array;
+    }
 
-	public static void main(String[] args) {
-		int[] array = new int[]{3, 9, 6, 10, 4, 7, 2};
-		int[] sort = ShellSort.shellSort(array);
-		for (int num : sort) {
-			System.out.print(num + ",");
-		}
-	}
+    public static void main(String[] args) {
+        int[] array = new int[]{3, 9, 6, 10, 4, 7, 2};
+        int[] sort = ShellSort.shellSort(array);
+        for (int num : sort) {
+            System.out.print(num + ",");
+        }
+    }
 }
